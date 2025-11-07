@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍱 MBTI 점심 추천</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:#999;display:flex;justify-content:center;align-items:center;height:100vh}
+    .card{background:#fff;border-radius:25px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-align:center;max-width:400px;width:100%}
+    .logo{font-size:60px}
+    h1{margin:10px 0;color:#333}
+    .btn{margin-top:20px;padding:15px 25px;font-size:18px;background:#ffaa5c;color:#fff;border:none;border-radius:12px;cursor:pointer}
+    .result{margin-top:20px;font-size:24px;color:#ffaa5c;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🍱</div>
+    <h1>MBTI 점심 추천</h1>
+    <p>오늘의 메뉴를 골라볼까요?</p>
+    <button class="btn" onclick="pick()">🍽️ 추천받기</button>
+    <div class="result" id="result"></div>
+  </div>
+  <script>
+    const menus = ["김치찌개","초밥","제육볶음","파스타","마라탕","샐러드","돈까스","냉면","피자","떡볶이"];
+    function pick(){
+      const menu = menus[Math.floor(Math.random()*menus.length)];
+      document.getElementById("result").innerText = `오늘은 ${menu}!`;
+    }
+  </script>
+</body>
+</html>
